@@ -1,0 +1,44 @@
+{
+  "name": "inquirer-radiomatrix-prompt",
+  "version": "0.0.1",
+  "description": "A radio button matrix selector prompt for Inquirer",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "cli-cursor": "^3.1.0",
+    "cli-table": "^0.3.1",
+    "figures": "^3.1.0",
+    "inquirer": "^7.0.3"
+  },
+  "devDependencies": {
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1"
+  },
+  "scripts": {
+    "test": "npm run format",
+    "format": "prettier --write \"./**/*.{js,jsx,md,html}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesleymilan/inquirer-radiomatrix-prompt.git"
+  },
+  "keywords": [
+    "inquirer",
+    "cli",
+    "table",
+    "radio",
+    "prompt"
+  ],
+  "author": "Wesley Milan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wesleymilan/inquirer-radiomatrix-prompt/issues"
+  },
+  "homepage": "https://github.com/wesleymilan/inquirer-radiomatrix-prompt#readme",
+  "lint-staged": {
+    "*.{js,jsx,md,html}": [
+      "npm run format",
+      "git add"
+    ]
+  }
+}
