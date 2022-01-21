@@ -148,20 +148,39 @@ class RadioMatrixPrompt extends Base {
     return [Math.max(0, firstIndex - lastPageOffset), lastIndex];
   }
 
+  getQuestion() {
+    var message =
+        this.opt.prefix +
+        ' ' +
+        chalk.bold(this.opt.message) +
+        this.opt.suffix +
+        chalk.reset(' ');
+
+    // Append the default if available, and if question isn't answered
+    // if (this.opt.default != null && this.status !== 'answered') {
+    //   // If default password is supplied, hide it
+    //   if (this.opt.type === 'password') {
+    //     message += chalk.italic.dim('[hidden] ');
+    //   } else {
+    //     message += chalk.dim('(' + this.opt.default + ') ');
+    //   }
+    // }
+
+    return message;
+  }
+
   render(error) {
     let message = this.getQuestion();
     let bottomContent = "";
 
-    if (!this.spaceKeyPressed) {
-      message +=
-          "(Press " +
-          chalk.cyan.bold("<space>") +
-          " to select, " +
-          chalk.cyan.bold("<Up and Down>") +
-          " to move rows, " +
-          chalk.cyan.bold("<Left and Right>") +
-          " to move columns)";
-    }
+    message +=
+        "\n(Press " +
+        chalk.cyan.bold("<space>") +
+        " to select, " +
+        chalk.cyan.bold("<Up and Down>") +
+        " to move rows, " +
+        chalk.cyan.bold("<Left and Right>") +
+        " to move columns)";
 
     const [firstIndex, lastIndex] = this.paginate();
     const table = new Table({

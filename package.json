@@ -1,6 +1,6 @@
 {
   "name": "inquirer-radiomatrix-prompt",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A radio button matrix selector prompt for Inquirer",
   "main": "index.js",
   "dependencies": {
