@@ -1,14 +1,15 @@
 {
   "name": "inquirer-radiomatrix-prompt",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A radio button matrix selector prompt for Inquirer",
   "main": "index.js",
   "dependencies": {
-    "chalk": "^5.0.0",
-    "cli-cursor": "^4.0.0",
-    "cli-table": "^0.3.11",
-    "figures": "^4.0.0",
-    "inquirer": "^8.2.0"
+    "chalk": "^4.1.2",
+    "cli-cursor": "^3.1.0",
+    "cli-table": "^0.3.1",
+    "figures": "^3.1.0",
+    "inquirer": "^7.0.3",
+    "rxjs": "^7.5.2"
   },
   "devDependencies": {
     "lint-staged": "^9.5.0",

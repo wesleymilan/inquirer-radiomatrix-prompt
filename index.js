@@ -4,11 +4,10 @@ const figures = require("figures");
 const Base = require("inquirer/lib/prompts/base");
 const Choices = require("inquirer/lib/objects/choices");
 const observe = require("inquirer/lib/utils/events");
-const Paginator = require("inquirer/lib/utils/paginator");
 const Table = require("cli-table");
 const { map, takeUntil } = require("rxjs/operators");
 
-class TablePrompt extends Base {
+class RadioMatrixPrompt extends Base {
   /**
    * Initialise the prompt
    *
@@ -32,7 +31,7 @@ class TablePrompt extends Base {
    * Start the inquirer session
    *
    * @param  {Function} callback
-   * @return {TablePrompt}
+   * @return {RadioMatrixPrompt}
    */
   _run(callback) {
     this.done = callback;
@@ -213,4 +212,4 @@ class TablePrompt extends Base {
   }
 }
 
-module.exports = TablePrompt;
+module.exports = RadioMatrixPrompt;
